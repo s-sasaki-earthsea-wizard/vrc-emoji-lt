@@ -33,8 +33,11 @@
                 <textarea data-template>
 ## エンジニアこそ絵文字を使いこなそう！
 					
-〜TikTokerやインスタ女子に負けない絵文字活用術〜
-					
+〜インフルエンサーに負けない絵文字活用術〜
+
+✅  🆗  ⚠️  ❌  🔁  ✨  🧹 <br>
+🏗️  ⏮️  📊  📝  📂  🚚  🔑
+
 ---
 					
 ## 自己紹介
@@ -49,6 +52,8 @@
   * 空間情報処理 (GIS/リモートセンシング) 🌍
   * クラウドインフラ設計/IaC ☁️
 * GitHub: [s-sasaki-earthsea-wizard](https://github.com/s-sasaki-earthsea-wizard) 🐙
+* Speaker Deck: [syotasasaki593876](https://speakerdeck.com/syotasasaki593876) 📊
+* LinkedIn: [syota-sasaki-878901320](https://www.linkedin.com/in/syota-sasaki-878901320/) 🔗
 
 </div>
 <div class="col" data-markdown>
@@ -60,7 +65,7 @@
 
 ---
 
-## ハイライト
+### ハイライト
 
 * 絵文字はメッセージの情報量を豊かにする！
 
@@ -70,12 +75,12 @@
 
 #### 絵文字なしのログ
 
-```bash
-Data loading...
-Processing data...
-Generating reports...
+<div class="code-block">
+Data loading...<br>
+Processing data...<br>
+Generating reports...<br>
 Success!
-```
+</div>
 
 </div>
 
@@ -83,12 +88,12 @@ Success!
 
 #### 💻 絵文字ありのログ
 
-```bash
-📂 Data loading...
-🔁 Processing data...
-📊 Generating reports...
+<div class="code-block">
+📂 Data loading...<br>
+🔁 Processing data...<br>
+📊 Generating reports...<br>
 ✅ Success!
-```
+</div>
 
 </div>
 </div>
@@ -98,14 +103,14 @@ Success!
 
 ---
 
-## 絵文字の活用例
+### 絵文字の活用例
 
 <div class="container">
 <div class="col" data-markdown>
 
 * ロギング 📝
-* コミットメッセージ 💭
-* ユーザー向けのメッセージ 💬
+* `git` 🐙😺
+* ユーザー向けメッセージ 💬
 
 </div>
 
@@ -120,9 +125,9 @@ Success!
 </div>
 ---
 
-## ロギングでの絵文字の活用
+### ロギングでの絵文字の活用
 
-### 基本的な使い分け
+#### 基本的な使い分け
 
 * ✅ 成功
 * ❌ 失敗
@@ -137,10 +142,10 @@ Success!
 
 ---
 
-## 実践例: データベーストランザクション
+### 実践例: データベース操作のログ
 
 <div class="code-block">
-✅ Connected to database <br>
+✅ Database connection established. <br>
 🔄 Processing user data... <br>
 ❌ Failed to process user data! <br>
     └─ Error: Data type is invalid (Age is expected: number, got: string). <br>
@@ -148,39 +153,214 @@ Success!
 ✅ System restored to previous state.
 </div>
 
+* 絵文字を使うことで、ログの内容の多くが最初の一文字に凝縮される！
+* 絵文字は情報の圧縮率が高い！
 
 ---
 
-## 絵文字を使ったロギングのメリット
+### ロギングに絵文字を使うメリット
+
+* 👀 ログの内容が視覚的に分かりやすい!
+* 🔍 エラーの発見やデバッグが早くなる!
+* 💡 ログを見る人が増えたときにもわかりやすい!
 
 ---
 
-## コミットメッセージでの絵文字の活用
+### `git`での絵文字の活用
 
-* `git` でコミットメッセージにプレフィックスをつけることはよくあること
-* それに絵文字を組み合わせると、コミットの種類が一目でわかる！
+* `git` はプレフィックスを使うことがオススメ！
+    * もともとはコミットやPR, Issueの内容を一目でわかりやすくするのが目的
+* 絵文字を組み合わせると、メッセージの伝達がより効果的になる！
 
 <div class="code-block">
 ✨ feat: Add user registration page <br>
 <br>
-- Add registration form <br>
-- Implement email validation
+- 📮 Implement address registration form <br>
+- ✉️ Implement email registration form <br>
+- ☎️ Validate phone number
 </div>
 
 ---
 
-## プレフィックスと絵文字の組み合わせ例
+## プレフィックス+絵文字の力
 
 * ✨ feat: 新機能の追加
-* 🐛 fix: バグ修正
+* 🏗️ feat (WIP): 新機能の追加の途中
+* 🐛 bug-fix: バグ修正
 * 🔧 fix: システムに関係する大きな修正
-* ♻️ refactor: コードのリファクタリング
-* 🗑️ refactor: 不要なファイルやコードの削除
+* 🧹 refactor: リファクタリング、不要なコードの削除
+* 🔍 test: ユニットテストや結合テスト
 * 🚚 chore: ファイルやメソッドの移動や再配置
 * 📝 docs: ドキュメントの作成、更新
-* 🎨 style: UIのスタイリング変更
+* 🎨 style: UIのスタイル変更
 
 プレフィックスと絵文字を組み合わせることで、コミットの種類が一目でわかる！
+コミットメッセージやPR, Issueのタイトルにも活用しよう!
+
+---
+
+### `git` で絵文字を使うメリット
+
+* ℹ️ メッセージの情報量が増える！
+* 🐾 変更履歴を追いやすくなる！
+* 
+
+---
+
+### ユーザー向けのメッセージ
+
+* ここまでは開発者向けのメッセージ
+* ユーザー向けのメッセージにも絵文字を使うと、ユーザーの理解が早くなる！
+* 今日の例の中で一番大事かも⁉️
+
+---
+
+### どっちの方がユーザーに親切？
+
+<div class="container">
+<div class="col" data-markdown>
+
+#### 絵文字なしのメッセージ
+
+「山田太郎」さんのアクセス権を削除してもよろしいですか？<br>
+削除すると元に戻せません<br>
+削除する / キャンセル
+
+</div>
+
+<div class="col" data-markdown>
+
+#### 絵文字ありのメッセージ
+
+「山田太郎」さんのアクセス権を削除してもよろしいですか？<br>
+⚠️ 削除すると元に戻せません<br>
+削除する / キャンセル
+
+</div>
+</div>
+
+---
+
+### ユーザー向けメッセージの具体例
+
+* ✅ 登録が完了しました！
+* ❌ エラーが発生しました
+* ⚠️ 未保存の変更があります
+* 💡 プロフィールを完成させると、より多くの機能が使えるようになります
+* 🔒 セキュリティのため、パスワードは8文字以上にしてください
+
+---
+
+### 応用例: 絵文字を組み合わせる
+
+* 🔍💡 デバッグのヒント発見
+* 🐛✨ バグ修正完了
+* 🚀🎉 デプロイ成功
+* ⚠️💭 要検討事項
+* 🔧📊 パフォーマンスチューニング
+* 📝✅ ドキュメント更新完了
+
+---
+
+### <span style="font-family: Meiryo;">Emojipedia</span>
+
+* 😮‍💨 どんな絵文字を使えばいいかわからない
+* ℹ️ そんなときは[Emojipedia](https://emojipedia.org/)を使おう!
+* 📚 絵文字の百科事典
+
+![Emojipedia](assets/images/Emojipedia.png)
+
+---
+
+### 開発に絵文字を使う時の注意点
+
+* 単純に楽しくなってしまう 🤪
+* いわゆる「おじおば構文」になりがち 😱
+
+<div class="code-block">
+たいへん😱 エラーが出ちゃった😭😭<br>
+もう一回試してみて～！🙏🙏<br>
+データ処理が終わったよ✨🎊✨
+</div>
+
+* 大事なのは情報伝達の効率を上げることで、絵文字を使うことではない！
+* ビジネスライクでプロフェッショナルな文章を保つ
+
+---
+
+### 適切な絵文字の利用のために
+
+1. チーム内でルールを作る
+    * コミット種別の統一 (✨feat, 🐛fix)
+    * エラーレベルの統一 (❌Error, ⚠️Warning)
+2. 情報の過不足をチェック
+
+```bash
+❌ Login API connection failed
+└─ Error: timeout after 30sec
+```
+3. プロフェッショナルに徹する
+    * 💡 仕事で余計な遊び心を出さない!
+    * 参考資料: [テスト文字列に”うんこ”と入れるな](https://www.infiniteloop.co.jp/tech-blog/2021/09/unko/)
+
+---
+
+### インフルエンサーから学ぶ
+
+* インフルエンサーは文字数制限のある環境での情報圧縮の達人！
+
+```
+# インフルエンサー風
+🎉 新機能リリース！
+📱 モバイル対応完了
+💫 操作性UP
+
+# エンジニア風
+✨ feat: Add mobile support
+🔧 Improve UX
+📱 Support iOS/Android
+```
+
+* 🎯 重要な情報を最初に
+* 短い文章と絵文字の組み合わせ
+* 📊 一貫性のある使用
+
+
+---
+
+### まとめ: 絵文字で変わる開発コミュニケーション
+
+<div class="container">
+<div class="col">
+<div class="code-block">
+Error: API connection failed<br>
+Processing data (2/3)<br>
+Successfully deployed!
+</div>
+</div>
+<div class="col">
+
+<div class="code-block">
+❌ Error: API connection failed<br>
+🔄 Processing data (2/3)<br>
+✅ Successfully deployed!
+</div>
+
+</div>
+</div>
+
+💡 絵文字は小さな工夫だけど、大きな価値を生み出せます！
+
+---
+
+### 参考: ビジネスでの絵文字の受容
+
+* 絵文字を仕事で使うことの賛否は意外と半々
+* IT企業ならもっと別の結果になりそう
+* 2018年の調査なので、今ならもっと結果が変わるかも?
+
+![](assets/images/emoji-acceptance.png)
+* 引用: [株式会社ヌーラボ](https://prtimes.jp/main/html/rd/p/000000085.000025423.html)
 
                 </textarea>
             </section>

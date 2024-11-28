@@ -1,0 +1,59 @@
+/*********************************************
+ * Customized styles 
+*********************************************/
+.reveal .slides section {
+    max-width: 100%;  /* デフォルトの90%から拡大 */
+}
+
+/* 2カラムレイアウトの調整 */
+.container {
+    display: flex;
+    width: 100%;
+    padding-left: 0;
+    margin-left: -2%;
+    gap: 15px;
+}
+  
+.col {
+    flex: 1;
+    padding: 10px;
+}
+
+.code-block {
+    background: #002b36;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    margin: 10px 0;
+    text-align: left;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+.profile-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;  /* 左右のカラム間のスペース */
+}
+
+/* プロフィールカード用のカラム */
+.profile-left {
+    flex: 8;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 180%;
+    text-align: left;
+    font-size: 34px;
+    margin-left: -15%;
+    padding: 20px 20px;
+    position: relative;
+}
+
+/* アバター画像用のカラム */
+.profile-right {
+    flex: 4.5;
+    display: flex;
+    align-items: center; 
+    position: relative;
+}

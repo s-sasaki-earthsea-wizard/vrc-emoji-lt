@@ -387,15 +387,42 @@ Recent Commits:<br>
 
 ### ユーザー向けメッセージの具体例
 
-* ✅ 登録が完了しました！
-* ❌ エラーが発生しました
-* ⚠️ 未保存の変更があります
-* 💡 プロフィールを完成させると、より多くの機能が使えるようになります
-* 🔐 セキュリティのため、パスワードは8文字以上にしてください
+<div class="container">
+<div class="col-box-left" data-markdown>
+
+#### メッセージの種類と絵文字
+
+* ✅ 成功通知
+* ❌ エラー通知
+* ⚠️ 警告・注意
+* 🔐 セキュリティ関連
+
+</div>
+
+<div class="col-message-block-right" data-markdown>
+
+#### 実際の表示例
+
+✅ アカウント登録が完了しました！<br>
+└─ 🎉 さっそく写真を投稿しましょう<br>
+
+❌ アップロードに失敗しました<br>
+└─ ⤵️ サイズを5MB以下にしてください<br>
+
+⚠️ 作業中のデータが保存されていません<br>
+└─ 💾 保存することをおすすめします<br>
+
+🔐 パスワードの有効期限が近づいています<br>
+└─ 📆 あと3日で期限切れです<br>
+
+</div>
+</div>
 
 ---
 
 ## 応用例
+
+![emoji-application](assets/images/emoji-application.png)
 
 ---
 
@@ -565,26 +592,41 @@ Recent Commits:<br>
 
 ### まとめ
 
-#### ✨🤝絵文字で変わる開発コミュニケーション🤝✨
+#### ✨🤝 絵文字で変わる開発コミュニケーション 🤝✨
 
 <div class="container">
-<div class="col-code-block-left" data-markdown>
+<div class="col-box-left" data-markdown>
+
+#### 絵文字活用の3つのポイント
+
+* 👀 視認性の向上
+  * ログ、コミット、メッセージが見やすく
+* 🎯 情報の即時理解
+  * 状態や重要度が一目で分かる
+* 🌈 表現力の向上
+  * 感情やニュアンスも伝えられる
+
+</div>
+
+<div class="col" data-markdown>
+
+* **Before:**
+
+<div class="col-code-block-right">
+
 Error: API connection failed<br>
 Processing data (2/3)<br>
-Successfully deployed!
+Successfully deployed!<br>
+
 </div>
 
-<div class="col-code-block-right" data-markdown>
+* **After:**
+
+<div class="col-code-block-right">
+
 ❌ Error: API connection failed<br>
 🔄 Processing data (2/3)<br>
-🚀🎉 Successfully deployed!
-</div>
-
-</div>
-
-<div class="highlight-box" data-markdown>
-
-💡 絵文字は小さな工夫だけど、大きな価値を生み出せます！
+🚀✨ Successfully deployed!
 
 </div>
 

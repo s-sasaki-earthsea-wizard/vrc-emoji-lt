@@ -192,39 +192,7 @@ Success!
 
 ## `git`
 
-<div class="mermaid">
-    gitGraph
-        commit id: "initial"
-        branch develop
-        checkout develop
-        commit id: "dev-start"
-        branch feature/login
-        checkout feature/login
-        commit id: "login-1"
-        commit id: "login-2"
-        checkout develop
-        merge feature/login
-        branch feature/profile
-        checkout feature/profile
-        commit id: "profile-1"
-        branch bugfix/profile
-        checkout bugfix/profile
-        commit id: "fix-profile"
-        checkout feature/profile
-        merge bugfix/profile
-        commit id: "profile-2"
-        checkout develop
-        merge feature/profile
-        checkout main
-        merge develop tag: "v1.0.0"
-        branch hotfix/security
-        checkout hotfix/security
-        commit id: "security-patch"
-        checkout main
-        merge hotfix/security tag: "v1.0.1"
-        checkout develop
-        merge hotfix/security
-</div>
+![git](assets/images/git.png)
 
 ---
 

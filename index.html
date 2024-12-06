@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
     <link rel="stylesheet" href="dist/theme/solarized.css">
-    <link rel="stylesheet" href="styles/custom-solarized.css"
+    <link rel="stylesheet" href="styles/custom-solarized.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
     <div class="reveal">
@@ -26,8 +27,8 @@
 </div>
 
 ---
-					
-### 自己紹介
+
+### 🗒️ 自己紹介 😊
 
 <div class="profile-container">
 <div class="profile-left" data-markdown>
@@ -51,7 +52,7 @@
 
 ---
 
-### ハイライト
+### ✨ハイライト✨
 
 * 絵文字はメッセージの情報量を豊かにする！
 
@@ -61,7 +62,7 @@
 
 #### 絵文字なしのログ
 
-<div class="code-block">
+<div class="col-code-block-left">
 Data loading...<br>
 Processing data...<br>
 Generating reports...<br>
@@ -74,7 +75,7 @@ Success!
 
 #### 💻 絵文字ありのログ
 
-<div class="code-block">
+<div class="col-code-block-right" data-markdown>
 📂 Data loading...<br>
 🔁 Processing data...<br>
 📊 Generating reports...<br>
@@ -116,7 +117,9 @@ Success!
 </div>
 ---
 
-## ロギング
+## 🖥️ ロギング
+
+![logging_terminal](assets/images/logging_terminal.png)
 
 ---
 
@@ -189,6 +192,40 @@ Success!
 
 ## `git`
 
+<div class="mermaid">
+    gitGraph
+        commit id: "initial"
+        branch develop
+        checkout develop
+        commit id: "dev-start"
+        branch feature/login
+        checkout feature/login
+        commit id: "login-1"
+        commit id: "login-2"
+        checkout develop
+        merge feature/login
+        branch feature/profile
+        checkout feature/profile
+        commit id: "profile-1"
+        branch bugfix/profile
+        checkout bugfix/profile
+        commit id: "fix-profile"
+        checkout feature/profile
+        merge bugfix/profile
+        commit id: "profile-2"
+        checkout develop
+        merge feature/profile
+        checkout main
+        merge develop tag: "v1.0.0"
+        branch hotfix/security
+        checkout hotfix/security
+        commit id: "security-patch"
+        checkout main
+        merge hotfix/security tag: "v1.0.1"
+        checkout develop
+        merge hotfix/security
+</div>
+
 ---
 
 ### `git`での絵文字の活用
@@ -246,7 +283,7 @@ Success!
 </div>
 </div>
 
-<div class="col-code-block" data-markdown>
+<div class="col-code-block-right" data-markdown>
 
 Examples<br>
 <br>
@@ -267,9 +304,11 @@ Recent Commits:<br>
 
 ## ユーザー向けメッセージ
 
+![js_like_alert](assets/images/js_like_alert.png)
+
 ---
 
-### ユーザー向けのメッセージ
+### 💬 ユーザー向けのメッセージ
 
 <div class="container">
 <div class="col-box-left" data-markdown>
@@ -284,7 +323,7 @@ Recent Commits:<br>
 
 </div>
 
-<div class="col-message-block" data-markdown>
+<div class="col-message-block-right" data-markdown>
 
 ##### 実践例
 
@@ -311,25 +350,37 @@ Recent Commits:<br>
 ### どっちの方がユーザーに親切？
 
 <div class="container">
-<div class="col-box" data-markdown>
+<div class="col-message-block-left" data-markdown>
 
 #### 絵文字なしのメッセージ
 
-「山田太郎」さんのアクセス権を削除してもよろしいですか？<br>
-削除すると元に戻せません<br>
-削除する / キャンセル
+編集中の写真が画像されていません。<br>
+このまま終了すると変更内容が失われます。<br>
+<br>
+▫️ 保存して終了<br>
+▫️ 保存せずに終了<br>
+▫️ キャンセル
 
 </div>
 
-<div class="col-box" data-markdown>
+<div class="col-message-block-right" data-markdown>
 
 #### 絵文字ありのメッセージ
 
-「山田太郎」さんのアクセス権を削除してもよろしいですか？<br>
-⚠️ 削除すると元に戻せません<br>
-削除する / キャンセル
+📸 編集中の画像が保存されていません。<br>
+⚠️ このまま終了すると変更内容が失われます。<br>
+<br>
+▫️ 💾 保存して終了<br>
+▫️ 🚫 保存せずに終了<br>
+▫️ ↩️ キャンセル
 
 </div>
+</div>
+
+<div class="highlight-box" data-markdown>
+
+💡 絵文字があることで、各選択肢の意味が一目で分かる！
+
 </div>
 
 ---
@@ -344,7 +395,11 @@ Recent Commits:<br>
 
 ---
 
-### 応用例: 絵文字を組み合わせる
+## 応用例
+
+---
+
+### 絵文字を組み合わせる
 
 <div class="container">
 <div class="col-box" data-markdown>
@@ -387,7 +442,7 @@ Recent Commits:<br>
 
 ---
 
-### 開発に絵文字を使う時の注意点
+### ⚠️ 開発に絵文字を使う時の注意点
 
 * 単純に楽しくなってしまう 🤪
 * いわゆる「おじおば構文」になりがち 😱
@@ -398,83 +453,150 @@ Recent Commits:<br>
 データ処理が終わったよ✨🎊✨
 </div>
 
+<div class="highlight-box" data-markdown>
+
 * 大事なのは情報伝達の効率を上げることで、絵文字を使うことではない！
 * ビジネスライクでプロフェッショナルな文章を保つ
+
+</div>
 
 ---
 
 ### 適切な絵文字の利用のために
 
-1. チーム内でルールを作る
+1. 📚 チーム内でルールを作る
     * コミット種別の統一 (✨feat, 🐛fix)
     * エラーレベルの統一 (❌Error, ⚠️Warning)
-2. 情報の過不足をチェック
 
-```bash
-❌ Login API connection failed
-└─ Error: timeout after 30sec
-```
-3. プロフェッショナルに徹する
-    * 💡 仕事で余計な遊び心を出さない!
+2. 🔍 情報の過不足をチェック
+    * どの絵文字を使うか、どの情報を伝えるか
+    * 一貫性を保つ
+
+3. 👨🏻‍🔬 プロフェッショナルに徹する 
+    * 🤪 仕事で余計な遊び心を出さない!
     * 参考資料: [テスト文字列に”うんこ”と入れるな](https://www.infiniteloop.co.jp/tech-blog/2021/09/unko/)
+
+---
+
+### 🌏 絵文字の文化的背景を理解する
+
+<div class="container">
+<div class="col-box-left" data-markdown>
+
+#### 要注意な例
+
+* 👍 親指Up
+  * 一部の中東文化では侮辱的
+* 🍺 ビール
+  * 宗教的な配慮が必要
+* 👌 OKサイン
+  * 文化により異なる意味
+* 💦 汗...?
+  * 一部の文化では性的な意味
+
+</div>
+
+<div class="col-message-block-right" data-markdown>
+
+#### 代替案の例
+
+❌ "お疲れ様です 🍺"<br>
+✅ "お疲れ様です ✨"<br>
+<br>
+❌ "ありがとう 👍"<br>
+✅ "ありがとう 🙂"<br>
+<br>
+❌ "エラーに困っています 💦"<br>
+✅ "エラーに困っています 😣"
+
+</div>
+</div>
+
+---
+
+### 💡 安全な選択肢
+
+<div class="highlight-box" data-markdown>
+
+* ✨ 基本的な感情を表す絵文字（😊 🙂 😣）
+* 📝 シンプルなアイコン系の絵文字
+* ✅ 明確な意味を持つステータス系の絵文字
+
+</div>
 
 ---
 
 ### インフルエンサーから学ぶ
 
-* インフルエンサーは文字数制限のある環境での情報圧縮の達人！
+📢 インフルエンサーは情報伝達の達人！
 
-```
-# インフルエンサー風
-🎉 新機能リリース！
-📱 モバイル対応完了
-💫 操作性UP
+<div class="container"data-markdown>
 
-# エンジニア風
-✨ feat: Add mobile support
-🔧 Improve UX
-📱 Support iOS/Android
-```
+<div class="col-box" data-markdown>
 
-* 🎯 重要な情報を最初に
-* 短い文章と絵文字の組み合わせ
-* 📊 一貫性のある使用
+**インフルエンサー風**<br>
+* 🎉 新機能リリース！<br>
+* 📱 モバイル対応！<br>
+* 💫 操作性UP<br>
+* 😊 ぜひ試してね<br>
 
+</div>
+
+<div class="col-code-block-right" data-markdown>
+
+**Engineer style**<br>
+<br>
+✨ feat: Add mobile support<br>
+├─ 📱 Support iOS/Android<br>
+├─ 🔧 Improve UI/UX<br>
+└─ 📝 Update docs
+
+</div>
+
+</div>
+
+<div class="highlight-box" data-markdown>
+
+📖🤔 エンジニアならその道の達人から謙虚に学ぼう！
+
+</div>
 
 ---
 
-### まとめ: 絵文字で変わる開発コミュニケーション
+### まとめ
+
+#### ✨🤝絵文字で変わる開発コミュニケーション🤝✨
 
 <div class="container">
-<div class="col">
-<div class="code-block">
+<div class="col-code-block-left" data-markdown>
 Error: API connection failed<br>
 Processing data (2/3)<br>
 Successfully deployed!
 </div>
-</div>
-<div class="col">
 
-<div class="code-block">
+<div class="col-code-block-right" data-markdown>
 ❌ Error: API connection failed<br>
 🔄 Processing data (2/3)<br>
-✅ Successfully deployed!
+🚀🎉 Successfully deployed!
 </div>
 
 </div>
-</div>
+
+<div class="highlight-box" data-markdown>
 
 💡 絵文字は小さな工夫だけど、大きな価値を生み出せます！
+
+</div>
 
 ---
 
 ### 参考: ビジネスでの絵文字の受容
 
 * 絵文字を仕事で使うことの賛否は意外と半々
-* IT企業ならもっと別の結果になりそう
 * 2018年の調査なので、今ならもっと結果が変わるかも?
 
 ![](assets/images/emoji-acceptance.png)
+
 * 引用: [株式会社ヌーラボ](https://prtimes.jp/main/html/rd/p/000000085.000025423.html)
 
                 </textarea>
